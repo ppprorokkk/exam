@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Блог сайта</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Главная</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/blog">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">Про нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog/add">Добавить</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+
+    <div class="row py-lg-5">
+        <div class="container1 mb-10 mt-2">
+            <h1>Добавить блог</h1>
+            <form action="/blog/add" method="post"><br>
+                <input type="text" name="title" placeholder="Название статьи" class="form-control"><br>
+                <textarea type="text" name="full_text" placeholder="Текст статьи" class="form-control"></textarea><br>
+                <button type="submit">Сохранить</button><br>
+            </form>
+        </div>
+    </div>
+
+
+</main>
+</body>
+</html>
